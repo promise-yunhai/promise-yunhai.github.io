@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Height cooling</title>
+		<style type="text/css">
+			*{
+				margin:0px auto;
+				padding: 0;
+			}
+			body{
+				background-image: url(img/login/11.jpg);
+				background-size: 100% auto;
+				position: absolute;
+
+			}
+	
+			#box{
+				border:15px rgba(255,255,255,0.25) solid;
+				width:840px;
+				height:500px;
+				background-color:#ffffff00;
+				margin-top:115px;
+				border-radius: 10px;
+			}
+			#box>div{
+				width:420px;
+				height:500px;
+				float:left;
+			}
+			#box>div:nth-child(1){
+				background-image: url(img/login/7.jpg);
+				background-size: 420px 500px;
+			}
+			#box>div:nth-child(2){
+				background-color:rgba(255,255,255,0.7);
+			}
+			#box>div:nth-child(2)>div:nth-child(1){
+				margin-top: 100px;
+				margin-left: 50px;
+			}
+			#box>div:nth-child(2)>div:nth-child(2){
+				margin-top: 30px;
+				width:400px;
+				height:40px;
+			}
+			#box>div:nth-child(2)>div:nth-child(2)>input{
+				background-color: #FFFFFF00;
+				border:0px;
+				/*border-bottom:3px #000000 solid;*/
+				width:250px;
+				height:40px;
+				/*text-align: initial;*/
+				font-size: 18px;
+				padding: 0px 40px;
+				float: left;
+				outline: none;
+			}
+			#box>div:nth-child(2)>div:nth-child(2)>div{
+				/*background-image: url(1.png);
+				background-size: 20px 20px;
+				width:20px;
+				height:20px;
+				float:left;
+				margin-top: 10px;*/
+				margin-left: 40px;
+				margin-right: -30px;
+				font-size: 22px;
+				font-weight: bold;
+			}
+			#box>div:nth-child(2)>div:nth-child(3){
+				margin-top: 20px;
+				width:400px;
+				height:40px;
+			}
+			#box>div:nth-child(2)>div:nth-child(3)>input{
+				background-color: #FFFFFF00;
+				border:0px;
+				border-bottom:3px #000000 solid;
+				width:250px;
+				height:40px;
+				text-align: initial;
+				font-size: 18px;
+				padding: 0px 40px;
+				float: left;
+				outline: none;
+			}
+			#box>div:nth-child(2)>div:nth-child(3)>div{
+				background-image: url(img/login/2.png);
+				background-size: 20px 20px;
+				width:20px;
+				height:20px;
+				float:left;
+				margin-top: 10px;
+				margin-left: 40px;
+				margin-right: -30px;
+			}
+			#box>div:nth-child(2)>div:nth-child(4)>input{
+				width:330px;
+				height:45px;
+				border-radius:30px;
+				background-color: red;
+				text-align: center;
+				font-size: 20px;
+				line-height: 40px;
+				color:#ffffff;
+				margin-top: 40px;
+				margin-left: 40px;
+			}
+			#box>div:nth-child(2)>div:nth-child(5){
+				margin-top: 30px;
+				margin-left: 40px;
+			}
+			
+
+			
+		</style>
+	</head>
+		
+	<body id="body" onLoad="init()">
+		<div id="box">
+
+			<div></div>
+			<div>
+				<div><h2>Sign in Here</h2></div>
+				<div>
+					<div></div>
+<!-- 					<input type="text" id="1" placeholder="Username" />
+ -->					<div>Please enter a six-digit ID code</div>
+				</div>
+				<div>
+					<div></div>
+					<input type="password" id="2" placeholder="Password" />
+				</div>
+				<div><input type="button" value="Log in" onclick=javascritpt:jump()></div>
+				<div><h3></h3></div>
+			</div>
+		</div>
+
+		
+<audio autoplay controls = "controls" style="width:20px;width:200px;position:absolute;top:10px;right:10px;">
+			<source src="music/login/Lord Wavy - Hearts & Rubies (Prod_ lord Wavy & Yung Kenshin).mp3" > 
+			浏览器不支持HTML5：audio
+		</audio>
+
+		<!--=======附属说明====================================================-->
+	<div style="text-align:center;margin:50px 0; font:normal 14px/24px;color:#DA70D6; 'MicroSoft YaHei';">
+		<p>
+		制作时间：2020.08.01-2020.00.00
+		</p>
+		<p>
+		适用浏览器：360、FireFox、搜狗、QQ浏览器，不支持IE8及以下浏览器。
+		</p>
+	</div>
+	<div>
+		<script type="text/javascript" src="js/login/ThreeCanvas.js"></script>
+        <script>
+		var windowWidth = window.screen.width;
+		var windowHeight = window.screen.height;
+
+		function createSnow(){
+			var left = 0;
+			var top = 0;
+
+			var left_random = Math.random() * windowWidth;
+			var top_random = Math.random()* windowHeight;
+			var div = document.createElement('div');
+			div.className = 'snow';
+			div.style.transform = 'scale('+(Math.random())+')'
+
+			document.body.appendChild(div);
+
+			setInterval(function () {
+
+				div.style.left = left_random + left +'px';
+				div.style.top = top_random + top +'px'
+				left += 0.2;
+				top += 0.2;
+
+				if(left_random + left >= windowWidth){
+					left_random = Math.random();
+					left = 0;
+				}
+
+				if(top_random + top >= windowHeight){
+					top_random = Math.random();
+					top = 0;
+				}
+			},10)
+
+		}
+		for(var i = 0 ; i < 200 ; i++){
+			createSnow()
+		}
+	</script>
+	</body>
+</html>
